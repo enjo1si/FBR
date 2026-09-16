@@ -1,14 +1,18 @@
-# macOS
+# Системные файлы
 .DS_Store
+Thumbs.db
 
-# WebStorm / JetBrains
+# Настройки редактора
+.vscode/
 .idea/
 
-# Node
-node_modules/
-
-# Logs
+# Логи
 *.log
 
-# Environment
+# Временные файлы
+*.tmp
+*.temp
+
+# Переменные окружения
 .env
+.env.*
