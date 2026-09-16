@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# WebStorm / JetBrains
+.idea/
+
+# Node
+node_modules/
+
+# Logs
+*.log
+
+# Environment
+.env
