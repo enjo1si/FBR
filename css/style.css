@@ -93,6 +93,7 @@ a:focus-visible {
     border: none;
     border-radius: var(--radius-sm);
     cursor: pointer;
+    transition: background-color 0.2s;
 }
 
 .button:hover {
@@ -175,14 +176,26 @@ a:focus-visible {
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
     background-color: var(--color-bg);
+    transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .product-card:hover {
     border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px var(--color-primary);
+}
+
+.product-card:focus-within {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px var(--color-primary);
 }
 
 .product-card h3 {
     margin-top: 0;
+}
+
+.product-card__button:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
 }
 
 .aside-info {
@@ -225,6 +238,7 @@ a:focus-visible {
     border: 1px solid var(--color-border);
     border-radius: var(--radius-sm);
     font: inherit;
+    transition: border-color 0.2s;
 }
 
 .form-field input[type="checkbox"] {
