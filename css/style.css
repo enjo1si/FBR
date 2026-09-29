@@ -127,22 +127,29 @@ a:focus-visible {
 }
 
 .site-nav__list {
+    display: flex;
+    gap: var(--space-md);
     padding: 0;
     margin: var(--space-md) 0 0;
     list-style: none;
 }
 
-.site-nav__list li {
-    margin-bottom: var(--space-sm);
-}
-
 .site-nav__list a {
     color: var(--color-primary);
     text-decoration: none;
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-sm);
+    transition: color 0.2s, background-color 0.2s;
 }
 
 .site-nav__list a:hover {
-    text-decoration: underline;
+    color: var(--color-primary-dark);
+    background-color: var(--color-surface);
+}
+
+.site-nav__list a:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
 }
 
 .hero {
