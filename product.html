@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Оформление заявки в учебном интернет-магазине.">
+  <title>Оформление заявки — Учебный интернет-магазин</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__logo" href="index.html">ShopProject</a>
+    <nav class="site-nav" aria-label="Основная навигация">
+      <ul class="site-nav__list">
+        <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="section">
+  <nav class="breadcrumbs" aria-label="Хлебные крошки">
+    <a class="breadcrumbs__link" href="index.html">Главная</a>
+    <span class="breadcrumbs__current"> / Заявка</span>
+  </nav>
+
+  <h1>Оформление заявки</h1>
+  <p>Заполните форму, и мы свяжемся с вами.</p>
+
+  <form class="order-form" action="#" method="post" style="max-width: 600px;">
+    <div class="order-form__field">
+      <label class="order-form__label" for="page-name">Имя</label>
+      <input class="order-form__input" id="page-name" name="name" type="text" required>
+    </div>
+    <div class="order-form__field">
+      <label class="order-form__label" for="page-email">E-mail</label>
+      <input class="order-form__input" id="page-email" name="email" type="email" required>
+    </div>
+    <div class="order-form__field">
+      <label class="order-form__label" for="page-phone">Телефон</label>
+      <input class="order-form__input" id="page-phone" name="phone" type="tel" placeholder="+7 (900) 000-00-00" required>
+    </div>
+    <div class="order-form__field">
+      <label class="order-form__label" for="page-comment">Комментарий</label>
+      <textarea class="order-form__textarea" id="page-comment" name="comment" rows="4"></textarea>
+    </div>
+    <div class="order-form__field">
+      <label class="order-form__label">
+        <input type="checkbox" name="agreement" required>
+        Я согласен на обработку данных
+      </label>
+    </div>
+    <div class="order-form__actions">
+      <button class="button button--primary" type="submit">Отправить</button>
+    </div>
+  </form>
+</main>
+
+<footer class="site-footer" id="contacts">
+  <p>&copy; 2026 Учебный проект. Все права защищены.</p>
+</footer>
+</body>
+</html>

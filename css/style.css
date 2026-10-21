@@ -363,3 +363,72 @@ a:focus-visible {
     content: " / ";
     color: var(--color-muted);
 }
+
+/* Фиксированная кнопка Наверх */
+.scroll-top-button {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+.scroll-top-button:hover { background-color: var(--color-primary-dark); }
+
+/* Бейдж на карточке (Позиционирование) */
+.product-card { position: relative; }
+.product-card__badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 4px 10px;
+    background-color: var(--color-danger);
+    color: var(--color-white);
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: var(--radius-sm);
+}
+
+/* Верстка для страницы product.html */
+.product-layout { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-lg); margin-bottom: var(--space-xl); }
+.product-info__price { font-size: 24px; font-weight: bold; color: var(--color-primary); }
+.product-table { width: 100%; border-collapse: collapse; margin-top: var(--space-md); }
+.product-table th, .product-table td { border: 1px solid var(--color-border); padding: 12px; text-align: left; }
+.product-table th { background-color: var(--color-surface); }
+
+/* ===============================
+   Блок Отзывы (Самостоятельная доработка)
+   =============================== */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+}
+
+.review-card {
+    padding: var(--space-md);
+    background-color: var(--color-surface);
+    border-left: 4px solid var(--color-primary);
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.review-card__text {
+    font-style: italic;
+    margin: 0 0 var(--space-md) 0;
+}
+
+.review-card__author {
+    font-weight: bold;
+    color: var(--color-muted);
+    align-self: flex-end;
+}
