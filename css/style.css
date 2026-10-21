@@ -365,3 +365,31 @@ a:focus-visible {
     outline: 2px solid var(--color-primary);
     outline-offset: 3px;
 }
+
+/* Хлебные крошки */
+.breadcrumbs {
+    max-width: var(--container-width, 1100px);
+    margin: 0 auto var(--space-md, 16px);
+    font-size: 14px;
+    color: var(--color-muted, #666);
+}
+
+.breadcrumbs a {
+    color: var(--color-primary, #0057b8);
+}
+
+.breadcrumbs span::before {
+    content: " / ";
+    color: var(--color-muted, #666);
+}
+
+/* Плавная прокрутка к якорям */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Подсветка элемента, к которому перешли по якорю */
+:target {
+    outline: 2px dashed var(--color-primary, #0057b8);
+    outline-offset: 4px;
+}
