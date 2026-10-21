@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Главная страница учебного интернет-магазина.">
     <title>Учебный интернет-магазин</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js" defer></script>
@@ -21,10 +22,19 @@
                     <a class="site-nav__link" href="catalog.html">Каталог</a>
                 </li>
                 <li class="site-nav__item">
+                    <a class="site-nav__link" href="product.html">Карточка товара</a>
+                </li>
+                <li class="site-nav__item">
+                    <a class="site-nav__link" href="order.html">Заявка</a>
+                </li>
+                <li class="site-nav__item">
                     <a class="site-nav__link" href="contacts.html">Контакты</a>
                 </li>
                 <li class="site-nav__item">
                     <a class="site-nav__link" href="index.html#popular">Популярные товары</a>
+                </li>
+                <li class="site-nav__item">
+                    <a class="site-nav__link" href="index.html#reviews">Отзывы</a>
                 </li>
             </ul>
         </nav>
@@ -39,7 +49,7 @@
             В дальнейшем на её основе будет разработан многостраничный сайт
             интернет-магазина или каталога услуг.
         </p>
-        <a class="button" href="#popular">Перейти к товарам</a>
+        <a class="button button--primary" href="#popular">Перейти к товарам</a>
     </section>
 
     <section class="section" id="advantages">
@@ -57,6 +67,7 @@
 
         <div class="products-grid">
             <article class="product-card product-card--featured">
+                <span class="product-card__badge">Хит</span>
                 <h3 class="product-card__title">Товар 1</h3>
                 <p class="product-card__description">Краткое описание учебного товара.</p>
                 <p class="product-card__price">Цена: 1000 руб.</p>
@@ -85,6 +96,25 @@
         </div>
     </section>
 
+    <!-- НОВЫЙ БЛОК: Отзывы (Самостоятельная доработка) -->
+    <section class="section" id="reviews">
+        <h2>Отзывы наших покупателей</h2>
+        <div class="reviews-grid">
+            <article class="review-card">
+                <p class="review-card__text">«Отличный магазин! Быстрая доставка и вежливые менеджеры.»</p>
+                <span class="review-card__author">— Иван</span>
+            </article>
+            <article class="review-card">
+                <p class="review-card__text">«Очень удобный сайт, легко найти нужный товар.»</p>
+                <span class="review-card__author">— Мария</span>
+            </article>
+            <article class="review-card">
+                <p class="review-card__text">«Спасибо за качественную поддержку!»</p>
+                <span class="review-card__author">— Алексей</span>
+            </article>
+        </div>
+    </section>
+
     <aside class="aside-info">
         <h2>Информация для студентов</h2>
         <p>
@@ -95,10 +125,11 @@
     </aside>
 </main>
 
-<footer id="contacts">
+<footer class="site-footer" id="contacts">
     <p>&copy; 2026 Учебный проект. Все права защищены.</p>
     <p>Дисциплина: Фронтенд и бэкенд разработка</p>
 </footer>
+
 <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
     <h2 class="order-dialog__title" id="order-dialog-title">Оформление заявки</h2>
     <form class="order-form" id="order-form" action="#" method="post" novalidate>
@@ -157,6 +188,7 @@
 <p class="success-message" id="success-message" hidden>
     Форма успешно отправлена!
 </p>
-<button class="scroll-top-button" id="scroll-top-button" type="button" aria-label="Наверх"></button>
+<button class="scroll-top-button" id="scroll-top-button" type="button" aria-label="Наверх">↑</button>
+
 </body>
 </html>
